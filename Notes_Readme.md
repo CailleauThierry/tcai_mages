@@ -1,3 +1,21 @@
+04_05_2021 bis
+-------------------
+I am following instructions from:
+Python Tutorial - Projects Made Easy: Part #2 Adding Documentation with nbdev
+From <https://www.youtube.com/watch?v=n7lMmyam9Zk> 
+
+Your site is published at https://cailleauthierry.github.io/tcai_mages/ > Error 404
+
+PS C:\Users\tcailleau\Documents\Python\tcai_mages> nbdev_build_docs
+converting: C:\Users\tcailleau\Documents\Python\tcai_mages\00_core.ipynb
+converting: C:\Users\tcailleau\Documents\Python\tcai_mages\01_game.ipynb
+converting: C:\Users\tcailleau\Documents\Python\tcai_mages\index.ipynb
+Warning: Some of your Notebooks use the same title (['module name here', 'module name here']).
+converting C:\Users\tcailleau\Documents\Python\tcai_mages\index.ipynb to README.md
+PS C:\Users\tcailleau\Documents\Python\tcai_mages>
+
+This creates a \docs\index.html
+
 04_05_2021
 -------------------
 Redoing everything from scratch to get the doc
@@ -8,15 +26,6 @@ Installing collected packages: tcai-mages
   Running setup.py develop for tcai-mages
 Successfully installed tcai-mages
 PS C:\Users\tcailleau\Documents\Python\tcai_mages> 
-
-
-
-04_05_2021
--------------------
-I am following instructions from:
-Python Tutorial - Projects Made Easy: Part #2 Adding Documentation with nbdev
-From <https://www.youtube.com/watch?v=n7lMmyam9Zk> 
-
 
 
 04_04_2021
