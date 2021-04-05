@@ -2,6 +2,7 @@
   "tcai_mages": {
     "Overview": "/",
     "core": "core.html",
-    "game": "game.html"
+    "game": "game.html",
+    "Tutorial": "tutorial.html"
   }
 }
