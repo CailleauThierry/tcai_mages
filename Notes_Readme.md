@@ -123,6 +123,9 @@ Configuration file: C:/Users/tcailleau/Documents/Python/tcai_mages/docs/_config.
     Server address: http://127.0.0.1:4000/tcai_mages//
 
 The local URL "http://127.0.0.1:4000/tcai_mages//" does disaply the website!
+
+
+
 04_05_2021
 -------------------
 Redoing everything from scratch to get the doc

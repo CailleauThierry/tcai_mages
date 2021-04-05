@@ -1,8 +1,8 @@
-# Project name here
-> Summary description here.
+# Mages
+> This is a python module demonstrating nbdev for automatic documentation and git push
 
 
-This file will become your README and also the index of your documentation.
+This is the Readme
 
 ## Install
 
