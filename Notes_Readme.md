@@ -4,7 +4,7 @@ I am following instructions from:
 Python Tutorial - Projects Made Easy: Part #2 Adding Documentation with nbdev
 From <https://www.youtube.com/watch?v=n7lMmyam9Zk> 
 
-Your site is published at https://cailleauthierry.github.io/tcai_mages/ > Error 404
+Your site is published at https://cailleauthierry.github.io/tcai_mages/ > Error 404 (you must provide an index.html file.)
 
 PS C:\Users\tcailleau\Documents\Python\tcai_mages> nbdev_build_docs
 converting: C:\Users\tcailleau\Documents\Python\tcai_mages\00_core.ipynb
@@ -16,6 +16,113 @@ PS C:\Users\tcailleau\Documents\Python\tcai_mages>
 
 This creates a \docs\index.html
 
+That worked! I get (copy/paste of the text omly of the generate page):
+
+ tcai_mages
+ Nav
+github
+tcai_mages
+Overview
+module name here
+Project name here
+Summary description here.
+Install
+How to use
+This file will become your README and also the index of your documentation.
+
+Install
+pip install your_project_name
+
+How to use
+Fill me in please! Don't forget code examples:
+
+1+1
+2
+
+
+View docs locally
+If you want to look at your docs locally before you push to Github, you can do so by running a jekyll server. First, install Jekyll by following these steps. Then, install the modules needed for serving nbdev docs by cding to the docs directory, and typing **bundle install**. Finally, cd back to your repo root and type make docs_serve. This will launch a server on port 4000 (by default) which you can connect to with your browser to view your docs.
+
+If Github pages fails to build your docs, running locally with Jekyll is the easiest way to find out what the problem is.
+
+Followed:
+
+https://jekyllrb.com/docs/installation/windows/ > rubyinstaller-devkit-2.7.2-1-x64.exe > all defaults
+
+Done installing documentation for bundler after 5 seconds
+27 gems installed
+
+C:\Users\tcailleau>jekyll -v
+jekyll 4.2.0
+
+C:\Users\tcailleau>
+
+To get vscode to start in the default path of the project, best use cmd/exe promt (instead of PS) it also works for python
+
+C:\Users\tcailleau\Documents\Python\tcai_mages\docs>bundle install
+Fetching gem metadata from https://rubygems.org/..........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Fetching concurrent-ruby 1.1.7
+Installing concurrent-ruby 1.1.7
+
+[...]
+Installing github-pages 209
+
+Bundle complete! 5 Gemfile dependencies, 92 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+Post-install message from dnsruby:
+Installing dnsruby...
+  For issues and source code: https://github.com/alexdalitz/dnsruby
+  For general discussion (please tell us how you use dnsruby): https://groups.google.com/forum/#!forum/dnsruby
+Post-install message from sass:
+
+Ruby Sass has reached end-of-life and should no longer be used.
+
+* If you use Sass as a command-line tool, we recommend using Dart Sass, the new
+  primary implementation: https://sass-lang.com/install
+
+* If you use Sass as a plug-in for a Ruby web framework, we recommend using the
+  sassc gem: https://github.com/sass/sassc-ruby#readme
+
+* For more details, please refer to the Sass blog:
+  https://sass-lang.com/blog/posts/7828841
+
+
+PS C:\Users\tcailleau\Documents\WindowsPowerShell\Scripts> choco install make
+Chocolatey v0.10.15
+Installing the following packages:
+make
+By installing you accept licenses for the packages.
+Progress: Downloading make 4.3... 100%
+
+make v4.3 [Approved]
+make package files install completed. Performing other installation steps.
+ ShimGen has successfully created a shim for make.exe
+ The install of make was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+Chocolatey installed 1/1 packages.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+PS C:\Users\tcailleau\Documents\WindowsPowerShell\Scripts>
+
+PS C:\Users\tcailleau\Documents\Python\tcai_mages> make docs_serve
+cd docs && bundle exec jekyll serve
+Configuration file: C:/Users/tcailleau/Documents/Python/tcai_mages/docs/_config.yml
+            Source: C:/Users/tcailleau/Documents/Python/tcai_mages/docs
+       Destination: C:/Users/tcailleau/Documents/Python/tcai_mages/docs/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+      Remote Theme: Using theme fastai/nbdev-jekyll-theme
+   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
+                    done in 0.868 seconds.
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+ Auto-regeneration: enabled for 'C:/Users/tcailleau/Documents/Python/tcai_mages/docs'
+    Server address: http://127.0.0.1:4000/tcai_mages//
+
+The local URL "http://127.0.0.1:4000/tcai_mages//" does disaply the website!
 04_05_2021
 -------------------
 Redoing everything from scratch to get the doc
@@ -27,7 +134,22 @@ Installing collected packages: tcai-mages
 Successfully installed tcai-mages
 PS C:\Users\tcailleau\Documents\Python\tcai_mages> 
 
+C:\Users\tcailleau\Documents\Python\tcai_mages>jekyll -v
+jekyll 4.2.0
 
+C:\Users\tcailleau\Documents\Python\tcai_mages>cd docs
+
+
+
+Post-install message from html-pipeline:
+-------------------------------------------------
+Thank you for installing html-pipeline!
+You must bundle Filter gem dependencies.
+See html-pipeline README.md for more details.
+https://github.com/jch/html-pipeline#dependencies
+-------------------------------------------------
+
+C:\Users\tcailleau\Documents\Python\tcai_mages\docs>
 04_04_2021
 ------------------
 
