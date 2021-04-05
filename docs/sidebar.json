@@ -1,7 +1,7 @@
 {
   "tcai_mages": {
     "Overview": "/",
-    "core module": "core.html",
-    "game module": "game.html"
+    "core": "core.html",
+    "game": "game.html"
   }
 }

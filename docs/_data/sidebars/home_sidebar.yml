@@ -10,10 +10,10 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: core module
+      title: core
       url: core.html
     - output: web,pdf
-      title: game module
+      title: game
       url: game.html
     output: web
     title: tcai_mages

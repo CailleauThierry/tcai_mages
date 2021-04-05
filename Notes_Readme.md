@@ -125,6 +125,39 @@ Configuration file: C:/Users/tcailleau/Documents/Python/tcai_mages/docs/_config.
 The local URL "http://127.0.0.1:4000/tcai_mages//" does disaply the website!
 
 
+What do you want to do? ['attack']
+From Thierry's wand, a jet of fire shoots towards Gary.
+Well done, you beat Gary and leveled up to 2! 
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-7-f2878f9a6ea2> in <module>
+      1 player = init_player()
+----> 2 game_loop(player, 1)
+
+<ipython-input-6-7af9f9d03b74> in game_loop(player, n)
+      7         if winner == player:
+      8             print(f"Well done, you beat {boss.name} and leveled up to {i + 1}! ")
+----> 9             player.level_up()
+     10         else:
+     11             print(f"You have fallen to {boss.name}. Game Over!")
+
+c:\Users\tcailleau\Documents\Python\tcai_mages\tcai_mages\core.py in level_up(self)
+     47         self.max_health = self.max_health * self.level
+     48         self.current_health = self.max_health
+---> 49         self.ability.damage = self.ability * self.level
+     50 
+     51 # Cell
+
+TypeError: unsupported operand type(s) for *: 'Ability' and 'int'
+
+  Server running... press ctrl-c to stop.
+Terminate batch job (Y/N)? Y   > Stopping the script does not work in PS or cmd as it errors with "'touch' is not recognized as an internal or external command", it works in "Git Bash", 
+
+For some reason updating the doc string with a link (name of function surrounded by 2 backticks) only works after running
+
+"from nbdev.export import notebook2script; notebook2script()"
+
+as explained in the video
 
 04_05_2021
 -------------------
