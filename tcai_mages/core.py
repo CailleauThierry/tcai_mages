@@ -35,10 +35,12 @@ class Character:
 
 # Cell
 class Mage(Character):
+    "This is the main class for the player"
     def __init__(self, name, max_health, ability):
         super().__init__(name, max_health, ability)
 
     def attack(self, target):
+        "Attacks the given enemy"
         print(f"From {self.name}'s wand, {self.ability} {target.name}.")
         target.current_health -= self.ability.damage
 
@@ -46,7 +48,7 @@ class Mage(Character):
         self.level += 1
         self.max_health = self.max_health * self.level
         self.current_health = self.max_health
-        self.ability.damage = self.ability * self.level
+        self.ability.damage = self.ability.damage * self.level
 
 # Cell
 class Demon(Character):
