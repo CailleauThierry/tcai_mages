@@ -4,7 +4,13 @@ I am following instructions from:
 Python Tutorial - Projects Made Easy: Part #2 Adding Documentation with nbdev
 From <https://www.youtube.com/watch?v=n7lMmyam9Zk> 
 
-Your site is published at https://cailleauthierry.github.io/tcai_mages/ > Error 404 (you must provide an index.html file.)
+Your site is published at https://cailleauthierry.github.io/tcai_mages/ > Error 404 (you must provide an index.html file.) > ended up being a typo in one of the core function i.e.:
+
+self.ability.damage = self.ability * self.level
+instead of:
+self.ability.damage = self.ability.damage * self.level
+
+Funny how this did not affect the execution of the program
 
 PS C:\Users\tcailleau\Documents\Python\tcai_mages> nbdev_build_docs
 converting: C:\Users\tcailleau\Documents\Python\tcai_mages\00_core.ipynb
@@ -158,6 +164,28 @@ For some reason updating the doc string with a link (name of function surrounded
 "from nbdev.export import notebook2script; notebook2script()"
 
 as explained in the video
+
+Local URL Jekyll server still works great:
+
+$ make docs_serve
+nbdev_build_docs
+touch docs
+No notebooks were modified
+converting C:\Users\tcailleau\Documents\Python\tcai_mages\index.ipynb to README.md
+cd docs && bundle exec jekyll serve
+Configuration file: C:/Users/tcailleau/Documents/Python/tcai_mages/docs/_config.yml
+            Source: C:/Users/tcailleau/Documents/Python/tcai_mages/docs
+       Destination: C:/Users/tcailleau/Documents/Python/tcai_mages/docs/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+      Remote Theme: Using theme fastai/nbdev-jekyll-theme
+   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
+                    done in 1.024 seconds.
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+ Auto-regeneration: enabled for 'C:/Users/tcailleau/Documents/Python/tcai_mages/docs'
+    Server address: http://127.0.0.1:4000/tcai_mages//
+  Server running... press ctrl-c to stop.
 
 04_05_2021
 -------------------
