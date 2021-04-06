@@ -230,35 +230,8 @@ From Gary&#39;s wand, a jet of fire shoots towards Thierry.
 What do you want to do? [&#39;attack&#39;]
 From Thierry&#39;s wand, a jet of fire shoots towards Gary.
 Well done, you beat Gary and leveled up to 2! 
+Congratulations, you&#39;ve defeated all the bosses and won the game. Thierry&#39;s name shall go down in history!
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-7-f2878f9a6ea2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      1</span> player <span class="ansi-yellow-intense-fg ansi-bold">=</span> init_player<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>game_loop<span class="ansi-yellow-intense-fg ansi-bold">(</span>player<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-6-7af9f9d03b74&gt;</span> in <span class="ansi-cyan-fg">game_loop</span><span class="ansi-blue-intense-fg ansi-bold">(player, n)</span>
-<span class="ansi-green-fg">      7</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> winner <span class="ansi-yellow-intense-fg ansi-bold">==</span> player<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">      8</span>             print<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">f&#34;Well done, you beat {boss.name} and leveled up to {i + 1}! &#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 9</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>player<span class="ansi-yellow-intense-fg ansi-bold">.</span>level_up<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     10</span>         <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">     11</span>             print<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">f&#34;You have fallen to {boss.name}. Game Over!&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\tcailleau\Documents\Python\tcai_mages\tcai_mages\core.py</span> in <span class="ansi-cyan-fg">level_up</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
-<span class="ansi-green-fg">     47</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>max_health <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>max_health <span class="ansi-yellow-intense-fg ansi-bold">*</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>level
-<span class="ansi-green-fg">     48</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>current_health <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>max_health
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 49</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>ability<span class="ansi-yellow-intense-fg ansi-bold">.</span>damage <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>ability <span class="ansi-yellow-intense-fg ansi-bold">*</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>level
-<span class="ansi-green-fg">     50</span> 
-<span class="ansi-green-fg">     51</span> <span class="ansi-red-intense-fg ansi-bold"># Cell</span>
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: unsupported operand type(s) for *: &#39;Ability&#39; and &#39;int&#39;</pre>
 </div>
 </div>
 
@@ -290,6 +263,7 @@ Well done, you beat Gary and leveled up to 2!
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Converted 00_core.ipynb.
 Converted 01_game.ipynb.
+Converted 02_tutorial.ipynb.
 Converted index.ipynb.
 </pre>
 </div>
