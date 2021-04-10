@@ -1,3 +1,27 @@
+04_10_2021
+-------------------
+
+tcailleau@TCAILLEAU-02 MINGW64 ~/Documents/Python/tcai_mages (master)
+$ nbdev_install_git_hooks
+Executing: git config --local include.path ../.gitconfig
+Success: hooks are installed and repo's .gitconfig is now trusted
+
+tcailleau@TCAILLEAU-02 MINGW64 ~/Documents/Python/tcai_mages (master)
+$ *nbdev_fix_merge index.ipynb*
+Successfully merged conflicts!
+
+tcailleau@TCAILLEAU-02 MINGW64 ~/Documents/Python/tcai_mages (master)
+$ *nbdev_build_lib*
+Converted 00_core.ipynb.
+Converted 01_game.ipynb.    
+Converted 02_tutorial.ipynb.
+Converted index.ipynb.
+
+tcailleau@TCAILLEAU-02 MINGW64 ~/Documents/Python/tcai_mages (master)
+$ *nbdev_build_docs*
+converting: C:\Users\tcailleau\Documents\Python\tcai_mages\index.ipynb
+converting C:\Users\tcailleau\Documents\Python\tcai_mages\index.ipynb to README.md
+
 04_05_2021 bis
 -------------------
 I am following instructions from:
