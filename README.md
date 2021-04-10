@@ -23,7 +23,5 @@ Fill me in please! Don't forget code examples:
 
 
 
-```
 ## Tutorials from Nathan Cooper
 Here are the fictional links to the different tutorial 1 2 3 4
-```

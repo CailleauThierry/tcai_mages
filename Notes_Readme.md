@@ -169,8 +169,39 @@ From <https://github.com/CailleauThierry/tcai_mages/runs/2313670186> :
 65 index.ipynb 
 66 Error: Process completed with exit code 1.
 
+From <https://github.com/CailleauThierry/tcai_mages/runs/2314374205> :
+
+37 testing /home/runner/work/tcai_mages/tcai_mages/index.ipynb 
+38 Error in /home/runner/work/tcai_mages/tcai_mages/index.ipynb: 
+39 An error occurred while executing the following cell: 
+40 ------------------ 
+41 ## Tutorials from Nathan Cooper 
+42 Here are the fictional links to the different tutorial 1 2 3 4 
+43 ------------------ 
+44  
+45  File "<ipython-input-3-59c52b0980b6>", line 2 
+46  Here are the fictional links to the different tutorial 1 2 3 4 
+47  ^ 
+48 SyntaxError: invalid syntax 
+49  
+50 SyntaxError: invalid syntax (<ipython-input-3-59c52b0980b6>, line 2) 
+51  
+52 testing /home/runner/work/tcai_mages/tcai_mages/00_core.ipynb 
+53 testing /home/runner/work/tcai_mages/tcai_mages/02_tutorial.ipynb 
+54 Traceback (most recent call last): 
+55  File "/opt/hostedtoolcache/Python/3.6.13/x64/bin/nbdev_test_nbs", line 8, in <module> 
+56  sys.exit(nbdev_test_nbs()) 
+57  File "/opt/hostedtoolcache/Python/3.6.13/x64/lib/python3.6/site-packages/fastcore/script.py", line 105, in _f 
+58  tfunc(**merge(args, args_from_prog(func, xtra))) 
+59  File "/opt/hostedtoolcache/Python/3.6.13/x64/lib/python3.6/site-packages/nbdev/test.py", line 120, in nbdev_test_nbs 
+60  raise Exception(msg + '\n'.join([f.name for p,f in zip(passed,files) if not p])) 
+61 Exception: The following notebooks failed: 
+62 01_game.ipynb 
+63 index.ipynb 
+64 Error: Process completed with exit code 1.
 
 
+changing the Cell to be a markdown instead to resolve this
 
 
 04_05_2021 bis
