@@ -22,6 +22,69 @@ $ *nbdev_build_docs*
 converting: C:\Users\tcailleau\Documents\Python\tcai_mages\index.ipynb
 converting C:\Users\tcailleau\Documents\Python\tcai_mages\index.ipynb to README.md
 
+
+ran and doc nbdev_fix_merge index.ipynb
+master @CailleauThierry  47f303a
+Run echo "Check we are starting with clean git checkout"
+Check we are starting with clean git checkout
+Trying to strip out notebooks
+Check that strip out was unnecessary
+ M 00_core.ipynb
+ M 01_game.ipynb
+ M 02_tutorial.ipynb
+!!! Detected unstripped out notebooks
+!!!Remember to run nbdev_install_git_hooks
+Error: Process completed with exit code 1.
+
+tcailleau@TCAILLEAU-02 MINGW64 ~/Documents/Python/tcai_mages (master)
+$ nbdev_fix_merge 00_core.ipynb
+Successfully merged conflicts!
+
+tcailleau@TCAILLEAU-02 MINGW64 ~/Documents/Python/tcai_mages (master)
+$ nbdev_fix_merge 01_game.ipynb,02_tutorial.ipynb
+Traceback (most recent call last):
+  File "c:\users\tcailleau\appdata\local\programs\python\python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "c:\users\tcailleau\appdata\local\programs\python\python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\tcailleau\AppData\Local\Programs\Python\Python39\Scripts\nbdev_fix_merge.exe\__main__.py", line 7, in <module>
+  File "c:\users\tcailleau\appdata\local\programs\python\python39\lib\site-packages\fastcore\script.py", line 105, in _f
+    tfunc(**merge(args, args_from_prog(func, xtra)))
+  File "c:\users\tcailleau\appdata\local\programs\python\python39\lib\site-packages\nbdev\merge.py", line 98, in nbdev_fix_merge
+    shutil.copy(fname, fname.with_suffix('.ipynb.bak'))
+  File "c:\users\tcailleau\appdata\local\programs\python\python39\lib\shutil.py", line 418, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "c:\users\tcailleau\appdata\local\programs\python\python39\lib\shutil.py", line 264, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: '01_game.ipynb,02_tutorial.ipynb'
+
+tcailleau@TCAILLEAU-02 MINGW64 ~/Documents/Python/tcai_mages (master)
+$ nbdev_fix_merge 01_game.ipynb;02_tutorial.ipynb
+Successfully merged conflicts!
+bash: 02_tutorial.ipynb: command not found
+
+tcailleau@TCAILLEAU-02 MINGW64 ~/Documents/Python/tcai_mages (master)
+$ nbdev_fix_merge 02_tutorial.ipynb
+Successfully merged conflicts!
+
+tcailleau@TCAILLEAU-02 MINGW64 ~/Documents/Python/tcai_mages (master)
+$ nbdev_build_lib
+Converted 00_core.ipynb.
+Converted 01_game.ipynb.
+Converted 02_tutorial.ipynb.
+Converted index.ipynb.
+
+tcailleau@TCAILLEAU-02 MINGW64 ~/Documents/Python/tcai_mages (master)
+$ nbdev_build_docs
+converting: C:\Users\tcailleau\Documents\Python\tcai_mages\00_core.ipynb
+converting: C:\Users\tcailleau\Documents\Python\tcai_mages\01_game.ipynb
+converting: C:\Users\tcailleau\Documents\Python\tcai_mages\02_tutorial.ipynb
+converting C:\Users\tcailleau\Documents\Python\tcai_mages\index.ipynb to README.md
+
+C:\Users\tcailleau\Documents\Python\tcai_mages\.git\hooks\post-merge 1 KB File 4/10/2021 7:16:31 PM 4/10/2021 7:16:31 PM 4/10/2021 7:16:31 PM 1
+3 nbdev_trust_nbs
+
+
 04_05_2021 bis
 -------------------
 I am following instructions from:
