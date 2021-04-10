@@ -84,9 +84,97 @@ converting C:\Users\tcailleau\Documents\Python\tcai_mages\index.ipynb to README.
 C:\Users\tcailleau\Documents\Python\tcai_mages\.git\hooks\post-merge 1 KB File 4/10/2021 7:16:31 PM 4/10/2021 7:16:31 PM 4/10/2021 7:16:31 PM 1
 3 nbdev_trust_nbs
 
+From <https://github.com/CailleauThierry/tcai_mages/runs/2313670186>  : 
+
+1 Run nbdev_test_nbs 
+6 testing /home/runner/work/tcai_mages/tcai_mages/01_game.ipynb 
+7 Error in /home/runner/work/tcai_mages/tcai_mages/01_game.ipynb: 
+8 An error occurred while executing the following cell: 
+9  ------------------ 
+10 player = init_player() 
+11 game_loop(player, 1) 
+12 ------------------ 
+13  
+14 --------------------------------------------------------------------------- 
+15 StdinNotImplementedError Traceback (most recent call last) 
+16 <ipython-input-7-f2878f9a6ea2> in <module> 
+17 ----> 1 player = init_player() 
+18  2 game_loop(player, 1) 
+19  
+20 <ipython-input-4-e0064c38adf0> in init_player() 
+21  4 print(f"Hi there, what is your speciality? {Ability.ability_types}") 
+22  5 while True: 
+23 ----> 6 ability_types = input() 
+24  7 if ability_types in Ability.ability_types: 
+25  8 break 
+26  
+27 /opt/hostedtoolcache/Python/3.6.13/x64/lib/python3.6/site-packages/ipykernel/kernelbase.py in raw_input(self, prompt) 
+28  844 if not self._allow_stdin: 
+29  845 raise StdinNotImplementedError( 
+30 --> 846 "raw_input was called, but this frontend does not support input requests." 
+31  847 ) 
+32  848 return self._input_request(str(prompt), 
+33  
+34 StdinNotImplementedError: raw_input was called, but this frontend does not support input requests. 
+35 StdinNotImplementedError: raw_input was called, but this frontend does not support input requests. 
+
+From <https://github.com/ipython/ipython/issues/11361>:
+It does not work exactly because of what it says – the Notebook does not support input requests, essentially meaning it does not support methods that ask for user input via stdin. (source: https://jupyter-client.readthedocs.io/en/stable/api/client.html)
+If you want to use inputs like these, you need to use a frontend that supports them, like JupyterLab or Deepnote.
+
+and
+
+janusson commented on Jul 14, 2020
+I completely wiped all iPython and jupyter directories from AppData and other locations, uninstalled VS Code and all extensions, and uninstalled all versions of python.
+After reinstalling the above (Python 3.8 through the Microsoft store, VS code without extensions), the input function now opens a dialogue box within VS Code for user input so I believe this is functioning correctly.
+Sometimes the nuclear option is the way to go?
+
+From https://github.com/microsoft/vscode-jupyter/issues/2664
+
+rchiodo commented on Nov 15, 2019
+I'm guessing 3 days to implement this.
+
+From <https://github.com/CailleauThierry/tcai_mages/runs/2313670186> :
+
+
+36  
+37 testing /home/runner/work/tcai_mages/tcai_mages/index.ipynb 
+38 Error in /home/runner/work/tcai_mages/tcai_mages/index.ipynb: 
+39 An error occurred while executing the following cell: 
+40 ------------------ 
+41 #hide 
+42 from your_lib.core import * 
+43 ------------------ 
+44  
+45 --------------------------------------------------------------------------- 
+46 ModuleNotFoundError Traceback (most recent call last) 
+47 <ipython-input-1-b21722cad84c> in <module> 
+48  1 #hide 
+49 ----> 2 from your_lib.core import * 
+50  
+51 ModuleNotFoundError: No module named 'your_lib' 
+52 ModuleNotFoundError: No module named 'your_lib' 
+53  
+54 testing /home/runner/work/tcai_mages/tcai_mages/00_core.ipynb 
+55 testing /home/runner/work/tcai_mages/tcai_mages/02_tutorial.ipynb 
+56 Traceback (most recent call last): 
+57  File "/opt/hostedtoolcache/Python/3.6.13/x64/bin/nbdev_test_nbs", line 8, in <module> 
+58  sys.exit(nbdev_test_nbs()) 
+59  File "/opt/hostedtoolcache/Python/3.6.13/x64/lib/python3.6/site-packages/fastcore/script.py", line 105, in _f 
+60  tfunc(**merge(args, args_from_prog(func, xtra))) 
+61  File "/opt/hostedtoolcache/Python/3.6.13/x64/lib/python3.6/site-packages/nbdev/test.py", line 120, in nbdev_test_nbs 
+62  raise Exception(msg + '\n'.join([f.name for p,f in zip(passed,files) if not p])) 
+63 Exception: The following notebooks failed: 
+64 01_game.ipynb 
+65 index.ipynb 
+66 Error: Process completed with exit code 1.
+
+
+
+
 
 04_05_2021 bis
--------------------
+--------------------------------------------------------------------------------------------------------
 I am following instructions from:
 Python Tutorial - Projects Made Easy: Part #2 Adding Documentation with nbdev
 From <https://www.youtube.com/watch?v=n7lMmyam9Zk> 
